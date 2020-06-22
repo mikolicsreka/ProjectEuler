@@ -3,18 +3,69 @@
 
 #include <iostream>
 
-int main()
+#define n 100
+/*
+It is possible to write five as a sum in exactly six different ways:
+
+4 + 1
+3 + 2
+3 + 1 + 1
+2 + 2 + 1
+2 + 1 + 1 + 1
+1 + 1 + 1 + 1 + 1
+
+How many different ways can one hundred be written as a sum of at least two positive integers?
+*/
+#include <vector>
+using namespace std;
+
+int countWays()
 {
-    std::cout << "Hello World!\n";
+    // table[i] will be storing the number of 
+    // solutions for value i. We need n+1 rows 
+    // as the table is consturcted in bottom up 
+    // manner using the base case (n = 0) 
+    int table[n + 1];
+
+    // Initialize all table values as 0 
+    memset(table, 0, sizeof(table));
+
+    // Base case (If given value is 0) 
+    table[0] = 1;
+
+    //for (int i = 0; i < 1; i++)
+    //{
+    //    for (int k = 0; k < 4; k++)
+    //    {
+    //        cout << table[k] << " ";
+    //    }
+    //    cout << endl;
+    //}
+
+    // Pick all integer one by one and update the 
+    // table[] values after the index greater 
+    // than or equal to n 
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = i; j <= n; j++)
+        {
+            table[j] += table[j - i];
+        }
+
+        //for (int k = 0; k < n; k++)
+        //{
+        //    cout << table[k] << " ";
+        //}
+        //cout << endl;
+    }
+
+
+    return table[n];
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+int main()
+{
+    cout << "Solution: " << countWays();
+}
