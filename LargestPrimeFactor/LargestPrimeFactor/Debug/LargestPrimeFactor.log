@@ -1,0 +1,5 @@
+﻿  LargestPrimeFactor.cpp
+C:\Users\mskyu\source\repos\ProjectEuler\LargestPrimeFactor\LargestPrimeFactor\LargestPrimeFactor.cpp(83,48): warning C4305: 'argument': truncation from '__int64' to 'long'
+C:\Users\mskyu\source\repos\ProjectEuler\LargestPrimeFactor\LargestPrimeFactor\LargestPrimeFactor.cpp(83,36): warning C4309: 'argument': truncation of constant value
+C:\Users\mskyu\source\repos\ProjectEuler\LargestPrimeFactor\LargestPrimeFactor\LargestPrimeFactor.cpp(47): warning C4715: 'LargestPrimeFactor': not all control paths return a value
+  LargestPrimeFactor.vcxproj -> C:\Users\mskyu\source\repos\ProjectEuler\LargestPrimeFactor\Debug\LargestPrimeFactor.exe
