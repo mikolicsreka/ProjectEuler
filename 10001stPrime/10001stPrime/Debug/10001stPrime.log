@@ -1,0 +1,4 @@
+﻿  10001stPrime.cpp
+C:\Users\mskyu\Desktop\ELTE\ProjectEuler\10001stPrime\10001stPrime\10001stPrime.cpp(21,25): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
+C:\Users\mskyu\Desktop\ELTE\ProjectEuler\10001stPrime\10001stPrime\10001stPrime.cpp(28,25): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
+  10001stPrime.vcxproj -> C:\Users\mskyu\Desktop\ELTE\ProjectEuler\10001stPrime\Debug\10001stPrime.exe
